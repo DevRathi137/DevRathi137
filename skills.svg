@@ -1,0 +1,99 @@
+<svg width="860" height="160" viewBox="0 0 860 160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg { fill: #0d1117; }
+      .sec { font-family: 'JetBrains Mono', monospace; font-size: 9px; fill: #2ecc71; letter-spacing: 0.2em; }
+      .bar-bg { fill: #131820; }
+      .lbl { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; fill: #8892a4; }
+      .pct { font-family: 'JetBrains Mono', monospace; font-size: 8.5px; fill: #3d4f6a; }
+      .divider { stroke: #1a2030; stroke-width: 1; }
+
+      @keyframes grow1  { from{width:0} to{width:252px} }
+      @keyframes grow2  { from{width:0} to{width:238px} }
+      @keyframes grow3  { from{width:0} to{width:196px} }
+      @keyframes grow4  { from{width:0} to{width:182px} }
+      @keyframes grow5  { from{width:0} to{width:168px} }
+      @keyframes grow6  { from{width:0} to{width:252px} }
+      @keyframes grow7  { from{width:0} to{width:238px} }
+      @keyframes grow8  { from{width:0} to{width:210px} }
+      @keyframes grow9  { from{width:0} to{width:196px} }
+      @keyframes grow10 { from{width:0} to{width:154px} }
+
+      .b1  { animation: grow1  1.2s cubic-bezier(.25,.8,.25,1) 0.05s both; }
+      .b2  { animation: grow2  1.2s cubic-bezier(.25,.8,.25,1) 0.15s both; }
+      .b3  { animation: grow3  1.2s cubic-bezier(.25,.8,.25,1) 0.25s both; }
+      .b4  { animation: grow4  1.2s cubic-bezier(.25,.8,.25,1) 0.35s both; }
+      .b5  { animation: grow5  1.2s cubic-bezier(.25,.8,.25,1) 0.45s both; }
+      .b6  { animation: grow6  1.2s cubic-bezier(.25,.8,.25,1) 0.05s both; }
+      .b7  { animation: grow7  1.2s cubic-bezier(.25,.8,.25,1) 0.15s both; }
+      .b8  { animation: grow8  1.2s cubic-bezier(.25,.8,.25,1) 0.25s both; }
+      .b9  { animation: grow9  1.2s cubic-bezier(.25,.8,.25,1) 0.35s both; }
+      .b10 { animation: grow10 1.2s cubic-bezier(.25,.8,.25,1) 0.45s both; }
+    </style>
+  </defs>
+
+  <rect width="860" height="160" class="bg" rx="12"/>
+  <line x1="4" y1="4" x2="856" y2="4" class="divider"/>
+  <line x1="4" y1="156" x2="856" y2="156" class="divider"/>
+
+  <!-- Left column label -->
+  <text x="30" y="24" class="sec">// STACK DEPTH</text>
+
+  <!-- Left bars -->
+  <text x="30"  y="46" class="lbl">Python</text>
+  <rect x="110" y="37" width="280" height="6" rx="3" class="bar-bg"/>
+  <rect x="110" y="37" height="6" rx="3" fill="#2ecc71" class="b1"/>
+  <text x="398" y="46" class="pct">90%</text>
+
+  <text x="30"  y="68" class="lbl">SQL</text>
+  <rect x="110" y="59" width="280" height="6" rx="3" class="bar-bg"/>
+  <rect x="110" y="59" height="6" rx="3" fill="#4da6ff" class="b2"/>
+  <text x="398" y="68" class="pct">85%</text>
+
+  <text x="30"  y="90" class="lbl">Node.js</text>
+  <rect x="110" y="81" width="280" height="6" rx="3" class="bar-bg"/>
+  <rect x="110" y="81" height="6" rx="3" fill="#f0a500" class="b3"/>
+  <text x="398" y="90" class="pct">70%</text>
+
+  <text x="30" y="112" class="lbl">Next.js</text>
+  <rect x="110" y="103" width="280" height="6" rx="3" class="bar-bg"/>
+  <rect x="110" y="103" height="6" rx="3" fill="#c97aff" class="b4"/>
+  <text x="398" y="112" class="pct">65%</text>
+
+  <text x="30" y="134" class="lbl">ML / scikit</text>
+  <rect x="110" y="125" width="280" height="6" rx="3" class="bar-bg"/>
+  <rect x="110" y="125" height="6" rx="3" fill="#ff6b6b" class="b5"/>
+  <text x="398" y="134" class="pct">60%</text>
+
+  <!-- Vertical divider -->
+  <line x1="430" y1="14" x2="430" y2="146" class="divider"/>
+
+  <!-- Right column label -->
+  <text x="450" y="24" class="sec">// DOMAIN FOCUS</text>
+
+  <!-- Right bars -->
+  <text x="450"  y="46" class="lbl">ETL · APIs</text>
+  <rect x="546" y="37" width="280" height="6" rx="3" class="bar-bg"/>
+  <rect x="546" y="37" height="6" rx="3" fill="#2ecc71" class="b6"/>
+  <text x="834" y="46" class="pct">core</text>
+
+  <text x="450"  y="68" class="lbl">Data Migration</text>
+  <rect x="546" y="59" width="280" height="6" rx="3" class="bar-bg"/>
+  <rect x="546" y="59" height="6" rx="3" fill="#4da6ff" class="b7"/>
+  <text x="834" y="68" class="pct">high</text>
+
+  <text x="450"  y="90" class="lbl">Cust. Success</text>
+  <rect x="546" y="81" width="280" height="6" rx="3" class="bar-bg"/>
+  <rect x="546" y="81" height="6" rx="3" fill="#f0a500" class="b8"/>
+  <text x="834" y="90" class="pct">mid</text>
+
+  <text x="450" y="112" class="lbl">ML Pipelines</text>
+  <rect x="546" y="103" width="280" height="6" rx="3" class="bar-bg"/>
+  <rect x="546" y="103" height="6" rx="3" fill="#c97aff" class="b9"/>
+  <text x="834" y="112" class="pct">mid</text>
+
+  <text x="450" y="134" class="lbl">Web / Full-stack</text>
+  <rect x="546" y="125" width="280" height="6" rx="3" class="bar-bg"/>
+  <rect x="546" y="125" height="6" rx="3" fill="#ff6b6b" class="b10"/>
+  <text x="834" y="134" class="pct">grow</text>
+</svg>

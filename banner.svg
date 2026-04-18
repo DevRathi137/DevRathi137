@@ -1,0 +1,134 @@
+<svg width="860" height="200" viewBox="0 0 860 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap');
+
+      .bg { fill: #0d1117; }
+      .border-rect { fill: none; stroke: #1a2030; stroke-width: 1; }
+      .green-border { fill: none; stroke: #2ecc71; stroke-width: 1.5; stroke-dasharray: 6 4; animation: dash 8s linear infinite; }
+      .name { font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700; fill: #f0f2f7; }
+      .name-accent { font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700; fill: #2ecc71; }
+      .sub { font-family: 'JetBrains Mono', monospace; font-size: 11px; fill: #3d4f6a; letter-spacing: 0.12em; }
+      .prompt { font-family: 'JetBrains Mono', monospace; font-size: 11px; fill: #2ecc71; opacity: 0.7; }
+      .cursor { fill: #2ecc71; animation: blink 1s step-end infinite; }
+      .pipe-box { fill: #131820; stroke: #2a3245; stroke-width: 1; rx: 8; }
+      .pipe-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; fill: #8892a4; }
+      .pipe-sub { font-family: 'JetBrains Mono', monospace; font-size: 8px; fill: #3d4f6a; }
+      .pipe-line { stroke: #2ecc71; stroke-width: 1; fill: none; opacity: 0.4; }
+      .arrow-head { fill: #2ecc71; opacity: 0.4; }
+      .packet { fill: #2ecc71; }
+      .loc { font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #3d4f6a; }
+
+      @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+      @keyframes dash { to { stroke-dashoffset: -40; } }
+
+      @keyframes p1 { 0%{transform:translateX(0);opacity:0} 5%{opacity:1} 90%{opacity:1} 100%{transform:translateX(118px);opacity:0} }
+      @keyframes p2 { 0%{transform:translateX(0);opacity:0} 5%{opacity:1} 90%{opacity:1} 100%{transform:translateX(118px);opacity:0} }
+      @keyframes p3 { 0%{transform:translateX(0);opacity:0} 5%{opacity:1} 90%{opacity:1} 100%{transform:translateX(118px);opacity:0} }
+      @keyframes p4 { 0%{transform:translateX(0);opacity:0} 5%{opacity:1} 90%{opacity:1} 100%{transform:translateX(118px);opacity:0} }
+
+      .dot1 { animation: p1 2.4s linear infinite; }
+      .dot2 { animation: p2 2.4s linear infinite; animation-delay: 0.6s; }
+      .dot3 { animation: p3 2.4s linear infinite; animation-delay: 1.2s; }
+      .dot4 { animation: p4 2.4s linear infinite; animation-delay: 1.8s; }
+
+      @keyframes fade-in { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
+      .n1 { animation: fade-in 0.5s ease both; animation-delay: 0.1s; }
+      .n2 { animation: fade-in 0.5s ease both; animation-delay: 0.3s; }
+      .n3 { animation: fade-in 0.5s ease both; animation-delay: 0.5s; }
+      .n4 { animation: fade-in 0.5s ease both; animation-delay: 0.7s; }
+      .n5 { animation: fade-in 0.5s ease both; animation-delay: 0.9s; }
+
+      @keyframes glow-pulse { 0%,100%{opacity:0.15} 50%{opacity:0.35} }
+      .glow { animation: glow-pulse 3s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="860" height="200" class="bg" rx="12"/>
+
+  <!-- Subtle glow behind name -->
+  <ellipse cx="200" cy="70" rx="140" ry="40" fill="#2ecc71" class="glow"/>
+
+  <!-- Dashed animated border -->
+  <rect x="4" y="4" width="852" height="192" rx="10" class="green-border"/>
+
+  <!-- Prompt line -->
+  <text x="30" y="38" class="prompt">dev@rathi:~$  whoami</text>
+
+  <!-- Name -->
+  <text x="30" y="72" class="name">Dev <tspan class="name-accent">Rathi</tspan></text>
+
+  <!-- Cursor -->
+  <rect x="142" y="57" width="10" height="17" class="cursor"/>
+
+  <!-- Subtitle -->
+  <text x="30" y="94" class="sub">DATA ENGINEER  ·  API ETL  ·  BUILDER  ·  PUNE, IN</text>
+
+  <!-- Divider line -->
+  <line x1="30" y1="108" x2="830" y2="108" stroke="#1a2030" stroke-width="1"/>
+
+  <!-- PIPELINE NODES -->
+  <!-- Node 1: Source -->
+  <g class="n1">
+    <rect x="30" y="122" width="100" height="52" rx="7" class="pipe-box"/>
+    <text x="80" y="143" text-anchor="middle" class="pipe-label">[ SOURCE ]</text>
+    <text x="80" y="158" text-anchor="middle" class="pipe-sub">REST · Webhooks</text>
+    <text x="80" y="168" text-anchor="middle" class="pipe-sub">Customer Data</text>
+  </g>
+
+  <!-- Arrow 1 + packets -->
+  <line x1="130" y1="148" x2="178" y2="148" class="pipe-line"/>
+  <polygon points="178,144 186,148 178,152" class="arrow-head"/>
+  <circle cx="132" cy="148" r="3" class="packet dot1"/>
+
+  <!-- Node 2: Extract -->
+  <g class="n2">
+    <rect x="188" y="122" width="100" height="52" rx="7" class="pipe-box"/>
+    <text x="238" y="143" text-anchor="middle" class="pipe-label">[ EXTRACT ]</text>
+    <text x="238" y="158" text-anchor="middle" class="pipe-sub">ETL Logic</text>
+    <text x="238" y="168" text-anchor="middle" class="pipe-sub">Migration</text>
+  </g>
+
+  <!-- Arrow 2 + packets -->
+  <line x1="288" y1="148" x2="336" y2="148" class="pipe-line"/>
+  <polygon points="336,144 344,148 336,152" class="arrow-head"/>
+  <circle cx="290" cy="148" r="3" class="packet dot2"/>
+
+  <!-- Node 3: Transform -->
+  <g class="n3">
+    <rect x="346" y="122" width="100" height="52" rx="7" class="pipe-box"/>
+    <text x="396" y="143" text-anchor="middle" class="pipe-label">[ TRANSFORM ]</text>
+    <text x="396" y="158" text-anchor="middle" class="pipe-sub">Python · SQL</text>
+    <text x="396" y="168" text-anchor="middle" class="pipe-sub">Pandas</text>
+  </g>
+
+  <!-- Arrow 3 + packets -->
+  <line x1="446" y1="148" x2="494" y2="148" class="pipe-line"/>
+  <polygon points="494,144 502,148 494,152" class="arrow-head"/>
+  <circle cx="448" cy="148" r="3" class="packet dot3"/>
+
+  <!-- Node 4: Load -->
+  <g class="n4">
+    <rect x="504" y="122" width="100" height="52" rx="7" class="pipe-box"/>
+    <text x="554" y="143" text-anchor="middle" class="pipe-label">[ LOAD ]</text>
+    <text x="554" y="158" text-anchor="middle" class="pipe-sub">PostgreSQL</text>
+    <text x="554" y="168" text-anchor="middle" class="pipe-sub">MongoDB</text>
+  </g>
+
+  <!-- Arrow 4 + packets -->
+  <line x1="604" y1="148" x2="652" y2="148" class="pipe-line"/>
+  <polygon points="652,144 660,148 652,152" class="arrow-head"/>
+  <circle cx="606" cy="148" r="3" class="packet dot4"/>
+
+  <!-- Node 5: Serve -->
+  <g class="n5">
+    <rect x="662" y="122" width="100" height="52" rx="7" fill="#0d2a1a" stroke="#2ecc71" stroke-width="1"/>
+    <text x="712" y="143" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9" fill="#2ecc71">[ SERVE ]</text>
+    <text x="712" y="158" text-anchor="middle" class="pipe-sub">FastAPI · Node</text>
+    <text x="712" y="168" text-anchor="middle" class="pipe-sub">Dashboard</text>
+  </g>
+
+  <!-- Bottom tagline -->
+  <text x="780" y="185" text-anchor="end" class="loc">// Pune, Maharashtra, IN</text>
+</svg>
